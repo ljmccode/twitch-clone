@@ -34,6 +34,7 @@ class StreamCreate extends Component {
 
     render() {
         return (
+            // handleSubmit is a redux-form property that contains an object with all our form values
             <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form error">
                 <Field name="title" component={this.renderInput} label="Enter Title:"/>
                 <Field name="description" component={this.renderInput} label="Enter Description:"/>

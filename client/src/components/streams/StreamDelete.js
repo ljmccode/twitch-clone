@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Modal from '../Modal';
 import history from '../../history';
 import { fetchStream } from '../../actions/index';
@@ -15,7 +16,7 @@ class StreamDelete extends Component {
         return (
             <React.Fragment>
                 <button className="ui negative button">Delete</button>
-                <button className="ui button">Cancel</button>
+                <Link to="/" className="ui button">Cancel</Link>
             </React.Fragment>
         )
     }

@@ -7,7 +7,7 @@ class StreamShow extends Component {
     constructor(props) {
         super(props);
 
-        this.vdeoRef = React.createRef();
+        this.videoRef = React.createRef();
     }
 
     componentDidMount() {
@@ -19,6 +19,11 @@ class StreamShow extends Component {
 
     componentDidUpdate() {
         this.buildPlayer();
+    }
+
+    componentWillUnmount() {
+        // tells play to stop playing video and detach itself
+        this.player.destroy();
     }
 
     buildPlayer() {

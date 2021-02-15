@@ -12,8 +12,12 @@ import { fetchStreams } from '../../actions';
         if (stream.userId === this.props.currentUserId) {
             return (
                 <div className="right floated content">
-                    <Link to={`/streams/edit/${stream.id}`} className="ui button primary">Edit</Link>
-                    <button className="ui button negative">Delete</button>
+                    <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+                        Edit
+                    </Link>
+                    <Link to={`/streams/delete/${stream.id}`} className="ui button negative">
+                        Delete
+                    </Link>
                 </div>
             )
         }
